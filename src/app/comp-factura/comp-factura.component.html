@@ -1,0 +1,32 @@
+<label for="nombre">IdFactura: </label>
+<input type="number" id="IdFactura" name="IdFactura" [(ngModel)]="factura.IdFactura"><br>
+<label for="nombre">IdCliente: </label>
+<input id="number" id="IdCliente" name="IdCliente" [(ngModel)]="factura.IdCliente"><br>
+<label for="b">TotalFactura: </label>
+<input type="number" id="TotalFactura" name="TotalFactura" [(ngModel)]="factura.TotalFactura"><br>
+<label for="precio">Iva: </label>
+<input type="number"id="Iva" name="Iva"[(ngModel)]="factura.Iva"><br>
+
+
+<button (click)="anadir()">añadir</button>
+<button  (click)="modificar()">modificar</button>
+<button  (click)="buscar()">buscar</button>
+<button  (click)="borrar()">borrar</button>
+<input type="number" id="TotalFactura" name="TotalFactura" [(ngModel)]="dato"><br>
+
+
+
+ <table>
+    <tr>
+        <td>IdFactura</td>
+        <td>IdCliente</td>
+        <td>TotalFactura</td>
+        <td>Iva</td>
+    </tr>
+    <tr *ngFor="let factura of facturas">
+        <td>{{factura.IdFactura}}</td>
+        <td>{{factura.IdCliente}}</td>
+        <td>{{factura.TotalFactura}}</td>
+        <td>{{factura.Iva}}</td>
+    </tr>
+</table>
